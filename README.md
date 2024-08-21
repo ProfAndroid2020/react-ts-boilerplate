@@ -7,6 +7,12 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
+## css modules
+
+Для того, чтобы стили css были изолированными используется принцип модулей. К каждому объявленному классу при запуске добавляется хэш, который делает стиля модуля уникальными. Таким образом стили не будут перемешиваться и затирать друг друга.
+
+Для того, чтобы стили можно было импортировать из css-файла в разметку файлов tsx требуется добавить в настройках VSC (Plugin path) плагин `typescript-plugin-css-modules`.
+
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
