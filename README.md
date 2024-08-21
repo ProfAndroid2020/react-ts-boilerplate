@@ -1,15 +1,12 @@
-# React + TypeScript + Vite
+# React + TypeScript + Vite + Chakra
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Проект коробка для быстрого развертывания приложения
 
 ## Оглавление
 
+- [Архитектура](#архитектура)
 - [css modules](#css-modules)
+- [Chakra](#chakra)
 
 ## Архитектура
 
@@ -20,6 +17,12 @@ Currently, two official plugins are available:
 Для того, чтобы стили css были изолированными используется принцип модулей. К каждому объявленному классу при запуске добавляется хэш, который делает стиля модуля уникальными. Таким образом стили не будут перемешиваться и затирать друг друга.
 
 Для того, чтобы стили можно было импортировать из css-файла в разметку файлов tsx требуется добавить в настройках VSC (Plugin path) плагин `typescript-plugin-css-modules`.
+
+## Chakra
+
+Для упрощения стилизации страниц используется библиотека `Chakra`. Это библиотека хорошо интегрирована с `React`, позволяя добавлять на разметку готовые компоненты. Используя эту библиотеку следует использовать компоненты, предоставляемые `Chakra` вместо привычных html-тегов.
+
+В случае, если требуется (хочется) написать свой компонент используя классические html-теги и css стилизацию, то рекомендуется реализацию компонента класть в отдельный файл и использовать на странице как компонент `Chakra`. При импорте стилей не забывать о [css-modules](#css-modules)
 
 ## Expanding the ESLint configuration
 
