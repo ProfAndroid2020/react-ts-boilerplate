@@ -7,12 +7,14 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint:fix": "eslint --fix",
+    "format": "prettier --write \"./**/*.{js,jsx,mjs,cjs,ts,tsx,json}\"",
     "preview": "vite preview",
     "prepare": "husky"
   },
   "lint-staged": {
-    "src/**/*.(ts|tsx)": [
-      "npm run lint:fix"
+    "src/**/*.(ts|tsx|json)": [
+      "npm run lint:fix",
+      "npm run format"
     ]
   },
   "dependencies": {
